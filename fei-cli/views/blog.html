@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fengine.js"></script>
+    <script src="js/AsyncAJAX.js"></script>
+</head>
+
+<body>
+<!--form action="login/?" method="post" enctype="application/x-www-form-urlencoded">
+  <p>username: <input type="text" name="username" /></p>
+  <p>password: <input type="text" name="password" /></p>
+  <button onclick="login();" >login</button>
+</form-->
+
+  <p>title: <input id="title" type="text" name="username" /></p>
+  <p>content: <input id="content" type="text" name="password" /></p>
+  <button onclick="upload();" >upload</button>
+  <button onclick="find();" >find</button>
+
+
+<script>
+    function upload(){
+        var t = document.getElementById('title').value,c = document.getElementById('content').value;
+        Ajax.post("blog/article", JSON.stringify({"title":t,"content":c}), "application/json", function(res){
+          var response = JSON.parse(res);
+          alert(response.article);
+        });
+    }
+
+    function find(){
+        var t = document.getElementById('title').value;
+        Ajax.get("blog/article?title="+t, function(res){
+          var response = JSON.parse(res);
+          alert(response.article);
+        });
+    }
+</script>
+
+</body>
+</html>

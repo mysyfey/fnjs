@@ -1,0 +1,27 @@
+<div class="directory-header">
+	<ul>
+    <% for(var i in this.navDir){ %> 
+      <li>
+
+      	<% if(this.navDir[i].link) {%>
+
+	        <a href="javascript:void(0)" onclick="get(this)" 
+	        	data-link="<%= this.navDir[i].link %>?type=folder">  
+	          <%= this.navDir[i].name %> 
+	        </a>
+
+	       <% } else {%>
+
+	       	<a href="javascript:void(0)" style="color:black">  
+	       		<%= this.navDir[i].name %> 
+	        </a>
+	        
+	       <% } %>
+
+      </li> 
+    <% } %> 
+	</ul>
+</div>
+<pre style="word-wrap: break-word; white-space: pre-wrap;">
+    <%= this.content %> 
+</pre>

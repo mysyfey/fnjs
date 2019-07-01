@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/AsyncAJAX.js"></script>
+
+</head>
+
+<body>
+
+	<div>
+    <form action="/music" enctype="multipart/form-data" method="post">
+        <input type="text" name="name"><br>
+        <input type="file" name="music" multiple="multiple"><br>
+        <input type="submit" value="Upload">
+    </form>
+   </div>
+<% if(files){ %> 
+   <div>
+   	<ul>
+    <% for(var i in files){ %> 
+      <li><a href="/music/file?music=<%= files[i].songName %>">  
+      <%= files[i].songName %> 
+      </a></li> 
+    	<% } %> 
+		</ul>
+   </div>
+<% } %> 
+<script>
+    //var token = document.querySelector('meta[name="c-token"]').getAttribute('content');
+
+    function get(el){
+       var url = "/music/file?music=" + el.dataset.link;
+        Ajax.get(url);
+    }
+</script>
+</body>
+</html>

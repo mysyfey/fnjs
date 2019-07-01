@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fengine.js"></script>
+    <script src="js/AsyncAJAX.js"></script>
+
+
+<style>
+    .directory-header{
+        height:100px;
+        width:100%;
+        background-color:white;
+    }
+
+    .directory-header li {
+        display:inline-block;
+        float: left;
+        position:relative;
+
+    }
+
+    .directory-header li>a{
+        font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 10px 15px;
+    line-height: 20px;
+    position: relative;
+    display: block;
+    }
+</style>
+</head>
+
+<body>
+
+</body>
+
+<script type="text/javascript">
+    Ajax.get("ARBR/?type=folder", function(data){
+
+       
+        renderTemplate(data);
+    });
+    
+    function get(el){
+        var url = "ARBR" +el.dataset.link;
+        //url = encodeURI(url);
+        console.log(url);
+        Ajax.get(url, function(data){
+        //var json = JSON.parse(data), html = compile(json.template, json.data);
+        //document.body.innerHTML = html;
+            renderTemplate(data);
+        });
+    }
+
+
+    function renderTemplate(data) {
+        //console.log(data);
+        //alert(data);
+        var json = JSON.parse(data),
+        //console.log(data);
+        fn = render(json.template, json.data, (html,err)=>{
+            if(html)
+                document.body.innerHTML = html;
+        });
+    }
+</script>
+
+</html>

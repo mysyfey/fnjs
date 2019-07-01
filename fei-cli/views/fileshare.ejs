@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+
+<body>
+
+	<div>
+    <form action="/file" enctype="multipart/form-data" method="post" accept-charset="UTF-8">
+        <input type="text" name="name"><br>
+        <input type="text" name="description"><br>
+        <input type="file" name="file"><br>
+        <input type="submit" value="Upload">
+    </form>
+   </div>
+<% if(files){ %> 
+   <div>
+   	<ul>
+    <% for(var i in files){ %> 
+      <li><a href="/file/<%= files[i].fileName %>">  
+      <%= files[i].fileName %> 
+      </a></li> 
+    	<% } %> 
+		</ul>
+   </div>
+<% } %> 
+<script>
+   
+</script>
+</body>
+</html>

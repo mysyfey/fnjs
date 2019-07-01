@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="csrf-token" content="{{csrfToken}}">
+    <meta name="c-token" content="<%=token%>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fengine.js"></script>
+    <script src="js/AsyncAJAX.js"></script>
+</head>
+
+<body>
+<!--form action="login/?" method="post" enctype="application/x-www-form-urlencoded">
+  <p>username: <input type="text" name="username" /></p>
+  <p>password: <input type="text" name="password" /></p>
+  <button onclick="login();" >login</button>
+</form-->
+
+  <p>username: <%=data1%>><input id="username" type="text" name="username" /></p>
+  <p>password: <%=local1%><input id="password" type="text" name="password" /></p>
+  <button onclick="register();" >register</button>
+  <button onclick="login();" >login</button>
+
+
+<script>
+    var token = document.querySelector('meta[name="c-token"]').getAttribute('content');
+    function register(){
+        var u = document.getElementById('username').value,p = document.getElementById('password').value;
+        Ajax.post("register/?", JSON.stringify({"username":u,"password":p}), "application/json", token, function(res){
+                var response = JSON.parse(res);
+                if(response.data.status == 1) {
+                    alert("registered!");
+                } else if(response.data.status == -1) {
+                    alert(response.data.reason);
+                }
+        });
+    }
+
+    function login(){
+        var u = document.getElementById('username').value,p = document.getElementById('password').value;
+        Ajax.post("login/?", JSON.stringify({"_csrf":token,"username":u,"password":p}), "application/json", token,function(res){
+                var response = JSON.parse(res);
+                if(response.template) {
+                    fn = render(response.template, response.data, (html,err)=>{
+                        if(html)
+                            document.body.innerHTML = html;
+                    });
+                } else if(response.data.status == -1)
+                    alert(response.data.reason);
+                
+        });
+    }
+</script>
+
+</body>
+</html>
