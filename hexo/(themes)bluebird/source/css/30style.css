@@ -1,0 +1,446 @@
+    body {
+        letter-spacing: 1px;
+        color: black;
+    }
+
+    .flex-center {
+        //width: 100%;
+    }
+
+    /*.ButtonBox {
+        border-radius: 100px;
+    }*/
+
+    .bg-video-img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        min-height: 100%;
+        min-width: 100%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+
+
+    #container {
+        //margin-top: -60px;
+    }
+
+
+    .svg-right {
+
+        height: 12px;
+        width: 30px;
+        /*height: 12px;
+        position: absolute;
+        right: -20px;
+        bottom: 6px;*/
+    }
+
+    .big-button {
+        background-color: #ff4d4c;
+        color: white;
+    }
+
+    .ButtonBox {
+        margin-top: 25px;
+    }
+
+
+    #carousel .cover-img {
+        position: relative;
+        height: 600px;
+        color: #fff;
+    }
+
+    .hollow-button {
+        border-color: #19b9b0;
+        color: #19b9b0;
+        margin: 50px 0 70px 0;
+    }
+
+
+    .twitter-button {
+        background-color: #ff4d4c;
+        color: #fff;
+        margin: 40px;
+        font-size: 18px;
+        padding: 15px 35px;
+        border-radius: 0;
+    }
+
+    .article-content {
+        margin: 0 auto;
+        color: #fff;
+        width: 70%;
+    }
+
+    .header-section {
+        position: relative;
+        color: #fff;
+    }
+
+    .header-section .flex-center {
+        position: relative;
+        text-align: center;
+        height: 400px;
+    }
+
+    .content-section {
+        position: relative;
+        background-color: white;
+    }
+
+    .content-section .center-content {
+        text-align: center;
+
+    }
+
+    .content-section .center-content p {
+        margin-bottom: 40px;
+    }
+
+    .long-pic {        
+        //height: 530px;
+        height: 0;
+        padding-bottom: 50%;
+    }
+
+    .grey-text {
+        color: rgba(26, 26, 26, .7);
+    }
+
+    .foot-nav>div {
+        display: inline-block;
+    }
+
+    
+
+    footer {
+        background-color: black;
+        padding: 80px 32px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .inner-footer {
+        max-width: 990px;
+    }
+
+    hr {
+        color: rgba(26, 26, 26, .15);
+        background-color: rgba(26, 26, 26, .15);
+        height: 1px;
+        border: none;
+        margin: 0;
+    }
+
+    footer hr {
+        background-color: rgba(255, 255, 255, .25);
+        margin: 80px 0;
+    }
+
+    .social-media {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        margin: 0 5px;
+    }
+
+    .social-media>div {
+        background-color:white;
+        width: 100%;
+        height: 100%;
+    }
+
+    .social-media>svg {
+        fill: white;
+    }
+
+    .company-info {
+        color: #ababab;
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+
+    .little-pic {
+        max-width: 560px;
+        width: 560px;
+    }
+
+    .square {
+        padding-bottom: 90%;
+        height: 0;
+    }
+
+
+    .idream-grid-50 .larger-part {
+        //padding: 0 10%;
+        padding-left: 5%;
+        height: auto;
+    }
+
+    .idream-grid-50 .larger-part-left {
+        padding: 0 5% 0 0;
+    }
+
+    .idream-grid-30 .larger-part {
+        //color: rgba(26, 26, 26, .7);
+    }
+
+    .content-section .little-pic,
+    .content-section .long-pic{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    /*.article-card,
+    .just-card {
+        margin-bottom: 30px;
+    }*/
+
+    .just-card {
+        border-radius: 4px;
+        //padding: 25px;
+        text-align: center;
+        padding: 30px 15% 40px;
+    }
+
+    .article-cards {
+    }
+
+    .article-card .cover-img {
+        height: 200px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .article-card .card-content {
+        color: white;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding: 25px;
+    }
+
+    .card-title {
+        margin-bottom: 15px;
+    }
+
+    .article-cards .twitter-button {
+        color: white;
+        border-radius: 5px;
+        margin: 20px 0 0;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+
+    .purple-card .card-content {
+        background-color: #9064BF;
+    }
+
+    .purple-card .twitter-button {
+        background-color: #624087;
+    }
+
+
+    .orange-card .card-content {
+        background-color: #fe813a;
+    }
+
+    .orange-card .twitter-button {
+        background-color: #d35914;
+    }
+
+    .yellow-card .card-content {
+        background-color: #ffca0a;
+    }
+
+    .yellow-card .twitter-button {
+        background-color: #c79b02;
+    }
+
+   .blue-card .card-content {
+        background-color: #369ff4;
+    }
+
+    .blue-card .twitter-button {
+        background-color:#296fa7;
+    }
+
+   .green-card .card-content {
+        background-color: #8ed4cc;
+    }
+
+    .green-card .twitter-button {
+        background-color:#47ada0;
+    }
+
+   .red-card .card-content {
+        background-color: #fa575d;
+    }
+
+    .red-card .twitter-button {
+        background-color: #dc272e;
+    }
+
+    .foreword-card .typography-intro {
+        margin: 15px 0;
+    }
+
+
+    .high-img-text-on-top {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        height: 700px;
+        position: relative;
+    }
+
+    .high-img-text-on-top .hollow-button {
+        color: black;
+        border-color: black;
+        /*margin: 30px 0 0;*/
+        padding: 8px 20px;
+        margin: 30px 0 0;
+    }
+
+
+    .high-img-text-center {
+        height: 900px;
+        color: white;
+        position: relative;
+    }
+
+    .high-img-text-center .flex-center {
+        position: relative;
+        height: 100%;
+    }
+
+
+    .banner {
+        background-color: #9064BF;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+    }
+
+    .banner .hollow-button {
+        margin: 0; 
+        margin-left: 3%;   
+        width: 160px;
+        border-width: 2px;
+        border-radius: 4px;
+        padding: 10px 0;
+        font-size: 15px;
+        border-color: white;
+        color: white;
+    }
+
+    .banner h3 {
+        font-size: 19px;
+        line-height: 1.38105;
+        letter-spacing: 0.1em;
+    }
+
+    @media only screen and (max-width: 1068px) {
+
+        .slide-img figure {
+            background-size: contain;
+        }
+
+        .paper_item {
+            width: 95%;
+        }
+
+        .paper_item_img {
+            height: 480px; //margin: 2.5em 0;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        
+        .banner .hollow-button {
+            display: block;
+            margin: 20px auto 0;
+        }
+
+        .high-img-text-on-top {
+            padding-top: 40px;
+        }
+
+        .header-section .flex-center
+        {
+            height: 300px;
+        }
+
+        .long-pic {
+            //height: 250px;
+        }
+
+        .foot-nav>div {
+            display: block;
+            margin: 15px auto;
+        }
+
+        .idream-grid-30 {
+            padding-bottom: 50px;
+        }
+
+        .idream-grid-30 .row {
+            //margin-bottom: 50px;            
+        }
+
+        .idream-grid-50 .larger-part {
+            padding: 40px 50px;
+        }
+
+
+        .idream-grid-50 .larger-part-left {
+            padding: 0 30px;
+            margin-bottom: 20px;
+        }
+
+        .idream-grid-30 .smaller-part {
+            margin-bottom: 50px;
+        }
+
+        .little-pic {
+            width: auto;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .idream-grid-30 .larger-part {
+            padding-left: 40px;
+            padding-right: 15px;
+        }
+    }
+
+    .idream-grid-30 {
+        //padding-bottom: 70px;
+    }
+
+    .idream-grid-50 {
+        //margin-top: 30px;
+    }
+
+    /*.idream-grid-30 .row {
+        margin-bottom: 70px;
+    }*/
+
+    .idream-grid-30 hr {
+        margin: 60px 0;
+    }
+
+

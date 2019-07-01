@@ -1,0 +1,168 @@
+<%- partial('_partial/head') %>
+<body>
+<style>
+.nav-not-fixed{
+	position:relative;top:0;
+	
+}
+.nav-fixed{
+	position:fixed;
+}
+
+.header-bg-layer{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background-color: #03d;
+	opacity: 0;
+}
+</style>
+<div class="hidden" style="height:100vh;visibility:hidden;position: absolute;"></div>
+<div id="myheader" class="nav-fixed" style="height:70px;z-Index:999;left: 0;right: 0;color:white;font-size:30px;font-size:center;">
+<!--
+transition-delay: .85s,.5s;
+    transition-duration: 0ms,.5s;
+    transition-property: transform,opacity;
+
+scroll-anim" data-scroll-animation="{'startVal':0,'endVal':1,'cssAttr':'opacity', 'topSpacing':10,'scrollLength':60, scrollUnit:'vh'}-->
+<div class="header-bg-layer " >
+</div><h3>this is header</h3>
+</div>
+
+<div class="test nav-fixed" style="right:0;top:0;color:white;font-size:30px;z-Index:999;background-color:black"></div>
+
+<script>
+
+$.bbNav({
+					header:$("#myheader"),
+					navBg:$(".header-bg-layer"),
+					navBgBottomLine:$(".hidden").height(),
+					navBgTopLine: $(".hidden").height()  * 0.1
+				});
+//var navScrollUpandDown = function(){
+
+
+	/*var $window = $(window), 
+			scrollPrev = 0, 
+			hidden = false, 
+			$header =$("#myheader"),
+			hHeight = $header.height(),
+			safeSpace = hHeight + 30,
+			scrolling = false,
+			scrollStart = -1, 
+			cssOffset = 0, 
+			$navBg = $(".header-bg-layer"),
+			navBgToView = $(".hidden").height(), 
+			navBgSafeSpace = navBgToView  * 0.15,
+			navBgOpacity =0,navBgChanging = false;
+
+	
+	var scroller = function() {
+
+		var scrollTop = $window.scrollTop();
+		
+		if(!$header.hasClass("disableScroll")){
+
+				if(scrollTop >= navBgToView){
+					if(navBgOpacity < 1){
+						navBgOpacity = 1;
+						$navBg.css("opacity",navBgOpacity);
+						if(navBgChanging){
+							navBgChanging = false;
+							$navBg.css("will-change", "");
+						}
+					}
+				} else if(navBgOpacity > 0){
+
+					if(scrollTop >= navBgSafeSpace){
+					
+						if(!navBgChanging){
+							navBgChanging = true;
+							$navBg.css("will-change", "opacity");
+						}
+
+						var top = scrollTop - navBgSafeSpace;
+						var val = top / (navBgToView - navBgSafeSpace);
+						//test.text(val + " top : " + top);
+						navBgOpacity = val;// < 0.01 ? 0 : val;
+						$navBg.css("opacity",navBgOpacity);
+					} else if(navBgOpacity > 0){
+						navBgOpacity = 0;
+						$navBg.css("opacity",navBgOpacity);
+					}
+
+					if(navBgOpacity == 0){
+							navBgChanging = false;
+						$navBg.css("will-change", "");
+					}
+				} 
+
+				var scrollUporDown = function(down){
+					if(scrollStart == -1) {
+						$header.css("will-change", "transform");
+					}
+					scrollStart = scrollPrev;
+
+					var scrollDelta = (scrollStart - scrollTop) * 0.8;
+
+					//cssOffset += down ? scrollDelta - cssOffset : scrollDelta;
+					cssOffset += scrollDelta;
+					var text = cssOffset;
+					var finished = false;
+
+					if(cssOffset < hHeight * -1){
+						cssOffset = hHeight * -1;
+						hidden = true;
+						finished = true;					
+					} else if(cssOffset > 0){
+						cssOffset = 0;
+						hidden = false;
+						finished = true;
+					}
+
+					$header.css("transform", "translateY(" + cssOffset + "px)");
+					if(finished){
+						scrollStart = -1;
+						$header.css("will-change", "");
+					}
+				}
+
+				if(scrollTop < scrollPrev){
+					if(hidden || scrollStart != -1){
+						scrollUporDown(false);
+					}
+				} else if(scrollTop > scrollPrev){	
+
+					if(!hidden || scrollStart != -1	){
+							scrollUporDown(true);		
+						}			
+				}
+
+		} 
+
+					//test.text(scrollStart + "  scrollTop:"+scrollTop+ "  offset:"+cssOffset);
+		scrollPrev = scrollTop;
+
+	};
+
+	scroller();
+
+	$window.scroll(function(event) {
+		scroller();
+  });*/
+
+//}
+
+</script>
+
+  <div id="container">
+
+        <div id="main" >
+          <%- body %>
+        </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<%- partial('_partial/heroHome', {title:"组件展览板",bg:"/images/7.jpg",content:""}) %>
+
+<div class="GridLatestNews">
+<h3 class="primary-header">模板组件</h3>
+	<div class="GridLatestNews__inner">
+
+		<% page.posts.each(function(post){ %>
+
+    <article class="NewsArticleThumbnail">
+
+    <a href="<%- url_for(post.path) %>" class="NewsArticleThumbnail__card">
+
+    	<img src="<%= post.thumbnail %>" class="NewsArticleThumbnail__image" style="object-position: 50% 50%;"> 
+
+    	<div class="NewsArticleThumbnail__meta Container__card">
+
+    	<div class="kick-eyebrow"><%=post.path%></div> 
+
+    	<h4 class="Heading__Tertiary"><%= post.title %></h4> 
+
+    	<div class="Copy__Secondary Copy__SecondaryDark">
+                  <%= post.excerpt %>
+      </div></div></a></article>
+
+		<% }) %>
+	</div>
+</div>
+
+<div class="GridLatestNews">
+<h3 class="primary-header">模板组件</h3>
+	<div class="GridLatestNews__inner">
+
+		<% page.posts.each(function(post){ %>
+
+    <article class="NewsArticleThumbnail">
+
+    <a href="<%- url_for(post.path) %>" class="NewsArticleThumbnail__card">
+
+    	<img src="<%= post.thumbnail %>" class="NewsArticleThumbnail__image" style="object-position: 50% 50%;"> 
+
+    	<div class="NewsArticleThumbnail__meta Container__card">
+
+    	<div class="kick-eyebrow"><%=post.path%></div> 
+
+    	<h4 class="Heading__Tertiary"><%= post.title %></h4> 
+
+    	<div class="Copy__Secondary Copy__SecondaryDark">
+                  <%= post.excerpt %>
+      </div></div></a></article>
+
+		<% }) %>
+	</div>
+</div>
