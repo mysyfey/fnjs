@@ -1,0 +1,40 @@
+{
+    "name": "feinode",
+    "description": "Simple Blog example with Express, Jade, Mongoose",
+    "author": "fei",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node index"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "browserify": "^16.2.3",
+        "commander": "^2.19.0",
+        "config": "^3.0.1",
+        "connect-multiparty": "^2.2.0",
+        "cookie-parser": "^1.4.4",
+        "csurf": "^1.9.0",
+        "ejs": "^2.6.1",
+        "event-stream": "^4.0.1",
+        "express": "^4.16.4",
+        "express-session": "^1.15.6",
+        "i": "^0.3.6",
+        "iconv-lite": "^0.4.24",
+        "jschardet": "^2.1.0",
+        "lodash": "^4.17.11",
+        "logger": "0.0.1",
+        "markdown": "^0.5.0",
+        "mongodb": "^3.1.13",
+        "multiparty": "^4.2.1",
+        "node-yaml": "^3.1.1",
+        "query-string": "^6.3.0",
+        "serve-static": "^1.13.2",
+        "simple-socks": "^1.0.1",
+        "url": "^0.11.0",
+        "watchify": "^3.11.1"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.0"
+    }
+}
